@@ -30,7 +30,7 @@ jobs:
         uses: azure/spring-cloud-deploy@v1
         with:
           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
-          action: Deploy
+          action: deploy
           service-name: test-azure-app
           app-name: test-application
           use-staging-deployment: false

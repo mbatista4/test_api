@@ -31,8 +31,8 @@ jobs:
         with:
           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
           action: deploy
-          service-name: <service instance name>
-          app-name: <app name>
+          service-name: test-azure-app
+          app-name: test-application
           use-staging-deployment: false
           package: ${{ env.ASC_PACKAGE_PATH }}
 #      - name: deploy to production with artifact

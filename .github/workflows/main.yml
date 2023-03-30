@@ -27,10 +27,10 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: deploy to production with artifact
-        uses: azure/spring-cloud-deploy@v1
+        uses: azure/spring-apps-deploy@v1
         with:
           azure-subscription: ${{ env.AZURE_SUBSCRIPTION }}
-          action: deploy
+          action: Deploy
           service-name: test-azure-app
           app-name: test-application
           use-staging-deployment: false

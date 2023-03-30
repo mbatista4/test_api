@@ -1,0 +1,10 @@
+#FROM openjdk:17-jre-slim
+FROM amazoncorretto:17
+
+ENV JAVA_OPTS " -Xms512m -Xms512m -Djava.security.edg=file:/dev/./urandom"
+
+WORKDIR application
+
+COPY target/bank-api-0.0.2-SNAPSHOT.jar ./
+
+ENTRYPOINT ["java", "-jar","bank-api-0.0.2-SNAPSHOT.jar"]

@@ -1,7 +1,9 @@
 #FROM openjdk:17-jre-slim
-FROM amazoncorretto:17
+FROM amazoncorretto:17-alpine
 
 ENV JAVA_OPTS " -Xms512m -Xms512m -Djava.security.edg=file:/dev/./urandom"
+
+EXPOSE 8080
 
 WORKDIR application
 
